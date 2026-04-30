@@ -104,14 +104,14 @@
 
 .hero-card-wrap {
   position: relative;
-  width: 280px;
-  height: 340px;
+  width: 360px;
+  height: 440px;
 }
 
 .hero-orb {
   position: absolute;
-  width: 320px;
-  height: 320px;
+  width: 420px;
+  height: 420px;
   background: radial-gradient(
     circle,
     rgba(79, 70, 229, 0.3) 0%,
@@ -133,8 +133,8 @@
 
 .dashed-ring {
   position: absolute;
-  width: 300px;
-  height: 300px;
+  width: 390px;
+  height: 390px;
   border: 2px dashed rgba(129, 140, 248, 0.3);
   border-radius: 50%;
   top: 50%;
@@ -153,11 +153,11 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 220px;
+  width: 290px;
   background: rgba(13, 13, 43, 0.9);
   border: 1px solid rgba(129, 140, 248, 0.2);
-  border-radius: 20px;
-  padding: 32px 24px;
+  border-radius: 24px;
+  padding: 36px 28px;
   text-align: center;
   z-index: 2;
   box-shadow:
@@ -175,19 +175,26 @@
 }
 
 .card-avatar {
-  width: 70px;
-  height: 70px;
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--indigo), var(--pink));
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-heading);
-  font-size: 24px;
-  font-weight: 800;
-  color: #fff;
   margin: 0 auto 16px;
   box-shadow: 0 8px 24px rgba(79, 70, 229, 0.4);
+  overflow: hidden;
+  padding: 3px;
+}
+
+.card-avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
 }
 
 .card-name {
