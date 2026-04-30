@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hemanth Kumar — Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
+
+  <!-- Devicons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/loader.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+  <link rel="stylesheet" href="css/education-contact.css" />
+</head>
+<body>
+
+  <!-- CUSTOM CURSOR -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- LOADING SCREEN -->
+  <div id="loader">
+    <div class="loader-initials">HS</div>
+    <div class="loader-bar-wrap">
+      <div class="loader-bar"></div>
+    </div>
+    <div class="loader-text">Loading Portfolio</div>
+  </div>
+
+  <!-- PARTICLE CANVAS -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- NAVIGATION -->
+  <nav id="navbar">
+    <a href="#hero" class="nav-logo">Hemanth Sambangi</a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="resume.pdf" target="_blank" class="nav-resume">Resume ↗</a></li>
+    </ul>
+    <div class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ── HERO ── -->
+    <section id="hero">
+      <div class="hero-left">
+        <div class="availability-tag reveal visible">
+          <span class="availability-dot"></span>
+          Available for Opportunities
+        </div>
+        <h1 class="hero-name reveal visible">Hemanth<br>Sambangi</h1>
+        <p class="hero-subtitle reveal visible">
+          <strong>Full-Stack</strong> Developer 
+        </p>
+        <p class="hero-desc reveal visible">
+          B.Tech CSE student at GVP College, building scalable web applications and serverless
+          cloud systems. Passionate about clean code, design patterns, and crafting exceptional
+          digital experiences.
+        </p>
+        <div class="hero-cta reveal visible">
+          <a href="#projects" class="btn-primary">View Projects ✦</a>
+          <a href="#contact"  class="btn-secondary">Get in Touch →</a>
+        </div>
+      </div>
+
+      <div class="hero-right reveal from-right visible">
+        <div class="hero-card-wrap">
+          <div class="hero-orb"></div>
+          <div class="dashed-ring"></div>
+          <div class="hero-card">
+            <div class="card-avatar">HS</div>
+            <div class="card-name">Hemanth Sambangi</div>
+            <div class="card-role">CSE • Full Stack • Cloud</div>
+            <div class="card-stats">
+              <div class="stat">
+                <div class="stat-num">3+</div>
+                <div class="stat-label">Projects</div>
+              </div>
+              <div class="stat">
+                <div class="stat-num">2</div>
+                <div class="stat-label">Internships</div>
+              </div>
+              <div class="stat">
+                <div class="stat-num">8.89</div>
+                <div class="stat-label">CGPA</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── MARQUEE ── -->
+    <div class="marquee-section">
+      <div class="marquee-track">
+        <div class="marquee-item">AICTE Google</div>
+        <div class="marquee-item">AWS Cloud</div>
+        <div class="marquee-item">Android Developer</div>
+        <div class="marquee-item">GVP College</div>
+        <div class="marquee-item">Full-Stack MERN</div>
+        <div class="marquee-item">Vercel Deployment</div>
+        <div class="marquee-item">Serverless Architecture</div>
+        <div class="marquee-item">GeeksforGeeks 160</div>
+        <div class="marquee-item">Udemy Certified</div>
+        <div class="marquee-item">AICTE Google</div>
+        <div class="marquee-item">AWS Cloud</div>
+        <div class="marquee-item">Android Developer</div>
+        <div class="marquee-item">GVP College</div>
+        <div class="marquee-item">Full-Stack MERN</div>
+        <div class="marquee-item">Vercel Deployment</div>
+        <div class="marquee-item">Serverless Architecture</div>
+        <div class="marquee-item">GeeksforGeeks 160</div>
+        <div class="marquee-item">Udemy Certified</div>
+      </div>
+    </div>
+
+    <!-- ── SKILLS ── -->
+    <section id="skills">
+      <div class="section-label reveal">Technical Expertise</div>
+      <h2 class="section-title reveal">Skills &amp; <span>Technologies</span></h2>
+      <p class="section-sub reveal">A broad toolkit spanning languages, frameworks, cloud platforms, and databases.</p>
+
+      <div class="skills-grid">
+        <div class="skill-item reveal">
+          <div class="skill-meta"><span class="skill-name">C/C++</span><span class="skill-pct">94%</span></div>
+          <div class="skill-bar-bg"><div class="skill-bar-fill skill-bar-7" data-pct="94"></div></div>
+        </div>
+        <div class="skill-item reveal">
+          <div class="skill-meta"><span class="skill-name">Java</span><span class="skill-pct">92%</span></div>
+          <div class="skill-bar-bg"><div class="skill-bar-fill skill-bar-0" data-pct="92"></div></div>
+        </div>
+
+        
+        
+        <div class="skill-item reveal">
+          <div class="skill-meta"><span class="skill-name">JavaScript</span><span class="skill-pct">88%</span></div>
+          <div class="skill-bar-bg"><div class="skill-bar-fill skill-bar-2" data-pct="88"></div></div>
+        </div>
+        <div class="skill-item reveal">
+          <div class="skill-meta"><span class="skill-name">Python</span><span class="skill-pct">85%</span></div>
+          <div class="skill-bar-bg"><div class="skill-bar-fill skill-bar-1" data-pct="85"></div></div>
+        </div>
+        <div class="skill-item reveal">
+          <div class="skill-meta"><span class="skill-name">React.js</span><span class="skill-pct">86%</span></div>
+          <div class="skill-bar-bg"><div class="skill-bar-fill skill-bar-3" data-pct="86"></div></div>
+        </div>
+        <div class="skill-item reveal">
+          <div class="skill-meta"><span class="skill-name">Node.js / Express.js</span><span class="skill-pct">84%</span></div>
+          <div class="skill-bar-bg"><div class="skill-bar-fill skill-bar-4" data-pct="84"></div></div>
+        </div>
+        <div class="skill-item reveal">
+          <div class="skill-meta"><span class="skill-name">MongoDB / MySQL</span><span class="skill-pct">82%</span></div>
+          <div class="skill-bar-bg"><div class="skill-bar-fill skill-bar-6" data-pct="82"></div></div>
+        </div>
+        <div class="skill-item reveal">
+          <div class="skill-meta"><span class="skill-name">AWS (EC2, Lambda, S3, DynamoDB)</span><span class="skill-pct">80%</span></div>
+          <div class="skill-bar-bg"><div class="skill-bar-fill skill-bar-5" data-pct="80"></div></div>
+        </div>
+        
+        
+      </div>
+
+      <div class="reveal">
+        <div class="chips-title">Tech Stack Cloud</div>
+        <div class="chips-cloud">
+          <span class="chip"><span class="chip-text">Java</span><i class="chip-icon devicon-java-plain colored"></i></span>
+          <span class="chip"><span class="chip-text">Python</span><i class="chip-icon devicon-python-plain colored"></i></span>
+          <span class="chip"><span class="chip-text">C</span><i class="chip-icon devicon-c-plain colored"></i></span>
+          <span class="chip"><span class="chip-text">C++</span><i class="chip-icon devicon-cplusplus-plain colored"></i></span>
+          <span class="chip"><span class="chip-text">JavaScript</span><i class="chip-icon devicon-javascript-plain colored"></i></span>
+          <span class="chip"><span class="chip-text">SQL</span><i class="chip-icon devicon-azuresqldatabase-plain colored"></i></span>
+          <span class="chip"><span class="chip-text">HTML</span><i class="chip-icon devicon-html5-plain colored"></i></span>
+          <span class="chip"><span class="chip-text">CSS</span><i class="chip-icon devicon-css3-plain colored"></i></span>
+          <span class="chip"><span class="chip-text">React.js</span><i class="chip-icon devicon-react-original colored"></i></span>
+          <span class="chip"><span class="chip-text">Node.js</span><i class="chip-icon devicon-nodejs-plain colored"></i></span>
+          <span class="chip"><span class="chip-text">Express.js</span><i class="chip-icon devicon-express-original"></i></span>
+          <span class="chip"><span class="chip-text">MongoDB</span><i class="chip-icon devicon-mongodb-plain colored"></i></span>
+          <span class="chip"><span class="chip-text">MySQL</span><i class="chip-icon devicon-mysql-plain colored"></i></span>
+          <span class="chip"><span class="chip-text">Vercel</span><i class="chip-icon devicon-vercel-plain"></i></span>
+          <span class="chip"><span class="chip-text">Git</span><i class="chip-icon devicon-git-plain colored"></i></span>
+          <span class="chip"><span class="chip-text">GitHub</span><i class="chip-icon devicon-github-original"></i></span>
+          <span class="chip"><span class="chip-text">Postman</span><i class="chip-icon devicon-postman-plain colored"></i></span>
+          <span class="chip"><span class="chip-text">VS Code</span><i class="chip-icon devicon-vscode-plain colored"></i></span>
+          <span class="chip"><span class="chip-text">Clerk</span><i class="chip-icon devicon-clerk-plain colored"></i></span>
+          <span class="chip"><span class="chip-text">Design Patterns</span><i class="chip-icon devicon-dot-net-plain colored"></i></span>
+          <span class="chip"><span class="chip-text">OOPs</span><i class="chip-icon devicon-java-plain colored"></i></span>
+          <span class="chip"><span class="chip-text">DSA</span><i class="chip-icon devicon-python-plain colored"></i></span>
+          <span class="chip"><span class="chip-text">SDLC</span><i class="chip-icon devicon-git-plain colored"></i></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── EXPERIENCE ── -->
+    <section id="experience">
+      <div class="section-label reveal">Work History</div>
+      <h2 class="section-title reveal">My <span>Experience</span></h2>
+      <p class="section-sub reveal">Building real-world skills through industry internships and virtual programs.</p>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot" style="background:var(--cyan);box-shadow:0 0 10px var(--cyan);"></div>
+          <div class="exp-card reveal from-right">
+            <div class="exp-header">
+              <div class="exp-title">Android Developer Intern</div>
+              <div class="exp-badge">AICTE</div>
+            </div>
+            <div class="exp-company">AICTE – Google Android Developer Virtual Internship</div>
+            <div class="exp-meta">
+              <span>May 2025 – July 2025</span>
+              <span>Virtual</span>
+            </div>
+            <p class="exp-desc">
+              Designed, built, tested, and deployed Android apps using Kotlin and Jetpack Compose,
+              applying OOPs, design patterns, and full SDLC practices end-to-end. Implemented state
+              management, responsive layouts, and performance optimization; applied debugging and
+              troubleshooting to ensure app stability and maintainability.
+            </p>
+            <div class="exp-chips">
+              <span class="exp-chip">Kotlin</span>
+              <span class="exp-chip">Jetpack Compose</span>
+              <span class="exp-chip">OOPs</span>
+              <span class="exp-chip">SDLC</span>
+              <span class="exp-chip">Performance Optimization</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot" style="background:var(--amber);box-shadow:0 0 10px var(--amber);"></div>
+          <div class="exp-card reveal from-right">
+            <div class="exp-header">
+              <div class="exp-title">Cloud Developer Intern</div>
+              <div class="exp-badge" style="background:rgba(245,158,11,0.15);border-color:rgba(245,158,11,0.3);color:var(--amber);">AICTE</div>
+            </div>
+            <div class="exp-company">AICTE – AWS Cloud Virtual Internship</div>
+            <div class="exp-meta">
+              <span>May 2024 – July 2024</span>
+              <span>Virtual</span>
+            </div>
+            <p class="exp-desc">
+              Designed and deployed a serverless web application on AWS using EC2, Lambda, S3, and
+              DynamoDB, following scalable cloud-native architecture principles. Implemented
+              performance monitoring and resolved cloud infrastructure issues through systematic
+              debugging and troubleshooting techniques.
+            </p>
+            <div class="exp-chips">
+              <span class="exp-chip">AWS EC2</span>
+              <span class="exp-chip">Lambda</span>
+              <span class="exp-chip">S3</span>
+              <span class="exp-chip">DynamoDB</span>
+              <span class="exp-chip">Serverless</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PROJECTS ── -->
+    <section id="projects">
+      <div class="section-label reveal">What I've Built</div>
+      <h2 class="section-title reveal">Featured <span>Projects</span></h2>
+      <p class="section-sub reveal">From full-stack web apps to cloud-native serverless systems.</p>
+
+      <div class="projects-grid">
+        <div class="project-card reveal">
+          <div class="project-emoji">💼</div>
+          <div class="project-name">Job Portal</div>
+          <div class="project-date">June 2025</div>
+          <p class="project-desc">Full-stack Job Portal with recruiter and job-seeker dashboards. Modular architecture built with OOPs and design patterns. Features Clerk-based secure authentication, resume uploads, job applications, and candidate review workflows. Deployed on Vercel with Sentry error monitoring.</p>
+          <div class="project-tags">
+            <span class="project-tag">MongoDB</span><span class="project-tag">Express.js</span>
+            <span class="project-tag">React.js</span><span class="project-tag">Node.js</span>
+            <span class="project-tag">Clerk</span><span class="project-tag">Sentry</span>
+            <span class="project-tag">Vercel</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-emoji">🎓</div>
+          <div class="project-name">Learning Management System</div>
+          <div class="project-date">Sept 2025</div>
+          <p class="project-desc">Scalable LMS built following full SDLC phases. Includes role-based access control, course management, and student progress tracking. Applied software engineering best practices for maintainability and testing. Deployed on Vercel for seamless access at scale.</p>
+          <div class="project-tags">
+            <span class="project-tag">MongoDB</span><span class="project-tag">Express.js</span>
+            <span class="project-tag">React.js</span><span class="project-tag">Node.js</span>
+            <span class="project-tag">Clerk</span><span class="project-tag">RBAC</span>
+            <span class="project-tag">Vercel</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-emoji">☁️</div>
+          <div class="project-name">Serverless Web Application</div>
+          <div class="project-date">May 2024</div>
+          <p class="project-desc">Serverless AWS app with a real-time visitor counter using DynamoDB and API Gateway, demonstrating cloud-native system design and debugging skills. Utilized S3 and CloudFront for static hosting and optimized content delivery, improving performance and reliability at scale.</p>
+          <div class="project-tags">
+            <span class="project-tag">AWS Lambda</span><span class="project-tag">API Gateway</span>
+            <span class="project-tag">DynamoDB</span><span class="project-tag">S3</span>
+            <span class="project-tag">CloudFront</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── EDUCATION ── -->
+    <section id="education">
+      <div class="section-label reveal">Academic Background</div>
+      <h2 class="section-title reveal">Education &amp; <span>Certifications</span></h2>
+      <p class="section-sub reveal">Strong academic foundation with industry-recognized certifications.</p>
+
+      <div class="edu-grid">
+        <div class="edu-card reveal">
+          <div class="edu-info">
+            <div class="edu-degree">B.Tech in Computer Science and Engineering</div>
+            <div class="edu-school">Gayatri Vidya Parishad College of Engineering (Autonomous)</div>
+            <div class="edu-meta">Visakhapatnam, AP &nbsp;•&nbsp; Nov 2022 – Present &nbsp;•&nbsp; No Standing Arrears</div>
+          </div>
+          <div class="edu-gpa">
+            <div class="gpa-num">8.89</div>
+            <div class="gpa-label">CGPA / 10</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal" style="margin-bottom:40px;">
+        <div class="courses-title">Relevant Coursework</div>
+        <div class="courses-chips">
+          <span class="course-chip">Data Structures &amp; Algorithms</span>
+          <span class="course-chip">Object-Oriented Programming</span>
+          <span class="course-chip">Operating Systems</span>
+          <span class="course-chip">Database Management</span>
+          <span class="course-chip">Software Engineering (SDLC)</span>
+          <span class="course-chip">Computer Networks</span>
+          <span class="course-chip">Machine Learning</span>
+          <span class="course-chip">Computer Organization</span>
+        </div>
+      </div>
+
+      <div class="certs-section reveal">
+        <div class="courses-title">Certifications &amp; Achievements</div>
+        <div class="cert-cards">
+          <div class="cert-card">
+            <div class="cert-icon">🏆</div>
+            <div>
+              <div class="cert-title">GfG 160 — 160 Days of Problem Solving</div>
+              <div class="cert-desc">22-week competitive coding program strengthening DSA and problem-solving in Java, C++, and Python. (GeeksforGeeks)</div>
+            </div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-icon">🎖️</div>
+            <div>
+              <div class="cert-title">Full-Stack Web Development Bootcamp</div>
+              <div class="cert-desc">Covered REST APIs, databases, front-end/back-end development, and cloud deployment. (Udemy)</div>
+            </div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-icon">🏏</div>
+            <div>
+              <div class="cert-title">GPL Cricket Tournament</div>
+              <div class="cert-desc">Represented CSE Department as opening batsman for two consecutive years, demonstrating teamwork and competitive spirit.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CONTACT ── -->
+    <section id="contact">
+      <div class="section-label reveal">Get In Touch</div>
+      <h2 class="section-title reveal">Let's <span>Connect</span></h2>
+      <p class="section-sub reveal">Open to full-time roles, internships, and exciting collaborations.</p>
+
+      <div class="contact-grid">
+        <div class="contact-cards">
+          <a href="mailto:hemanthsambangi2901@gmail.com" class="contact-card reveal from-left">
+            <div class="contact-icon contact-icon-indigo">📧</div>
+            <div><div class="contact-label">Email</div><div class="contact-value">hemanthsambangi2901@gmail.com</div></div>
+          </a>
+          <a href="tel:+916305589478" class="contact-card reveal from-left">
+            <div class="contact-icon contact-icon-pink">📱</div>
+            <div><div class="contact-label">Phone</div><div class="contact-value">+91 6305589478</div></div>
+          </a>
+          <div class="contact-card reveal from-left">
+            <div class="contact-icon contact-icon-cyan">📍</div>
+            <div><div class="contact-label">Location</div><div class="contact-value">Bobbili, Andhra Pradesh 535558</div></div>
+          </div>
+          <div class="contact-card reveal from-left">
+            <div class="contact-icon contact-icon-amber">✅</div>
+            <div><div class="contact-label">Availability</div><div class="contact-value">Open to Opportunities</div></div>
+          </div>
+          <a href="https://www.linkedin.com/in/hemanth-sambangi-ba05622bb/" target="_blank" class="contact-card reveal from-left">
+            <div class="contact-icon contact-icon-indigo">🔗</div>
+            <div><div class="contact-label">LinkedIn</div><div class="contact-value">View Profile</div></div>
+          </a>
+          <a href="https://github.com/HemanthSambangi2901" target="_blank" class="contact-card reveal from-left">
+            <div class="contact-icon contact-icon-pink">🐙</div>
+            <div><div class="contact-label">GitHub</div><div class="contact-value">View Repositories</div></div>
+          </a>
+        </div>
+
+        <div class="contact-right reveal from-right">
+          <div class="contact-avatar-wrap">
+            <div class="ripple"></div>
+            <div class="ripple"></div>
+            <div class="ripple"></div>
+            <div class="contact-avatar">HK</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Designed &amp; built by <strong>Hemanth Kumar</strong> · © 2025 · All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/animations.js"></script>
+
+</body>
+</html>
